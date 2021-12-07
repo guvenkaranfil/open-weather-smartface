@@ -1,13 +1,46 @@
 import PgHomeDesign from 'generated/pages/pgHome';
 
+import Location from '@smartface/native/device/location';
+import PermissionUtil from '@smartface/extension-utils/lib/permission';
+import { getWeatherByCityName, getWeatherByLocation } from '../api/weatherRepository';
+import { getLocation } from '@smartface/extension-utils/lib/location';
+
 export default class PgHome extends PgHomeDesign {
-	constructor() {
-		super();
-		// Overrides super.onShow method
-		this.onShow = onShow.bind(this, this.onShow.bind(this));
-		// Overrides super.onLoad method
-		this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-	}
+    constructor() {
+        super();
+        // Overrides super.onShow method
+        this.onShow = onShow.bind(this, this.onShow.bind(this));
+        // Overrides super.onLoad method
+        this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+
+        this.getUserLocation();
+    }
+
+    async getWeatherInfoByLocation(latitude: number, longitude: number) {
+        try {
+            const response = await getWeatherByLocation(latitude, longitude)
+            if (response) {
+                this.cityName.text = response.name
+                this.weatherType.text = response.weather[0].main
+                this.weatherDegree.text = response.main.temp
+            }
+        } catch (error) {
+
+        }
+
+    }
+
+    async getUserLocation() {
+        console.log('location permission status: ', Location.ios.getAuthorizationStatus);
+        try {
+            const location = await getLocation();
+            if (location) {
+                this.getWeatherInfoByLocation(location.latitude, location.longitude)
+            }
+        } catch (error) {
+
+        }
+    }
 }
 
 /**
@@ -17,7 +50,7 @@ export default class PgHome extends PgHomeDesign {
  * @param {Object} parameters passed from Router.go function
  */
 function onShow(this: PgHome, superOnShow: () => void) {
-	superOnShow();
+    superOnShow();
 }
 
 /**
@@ -26,5 +59,5 @@ function onShow(this: PgHome, superOnShow: () => void) {
  * @param {function} superOnLoad super onLoad function
  */
 function onLoad(this: PgHome, superOnLoad: () => void) {
-	superOnLoad();
+    superOnLoad();
 }

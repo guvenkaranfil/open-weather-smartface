@@ -28,6 +28,12 @@ const router = Router.of({
             headerBarStyle: { visible: true },
           }),
         }),
+        Route.of({
+            path: '/pages/pgHome',
+            build: buildExtender({
+              getPageClass: () => Pages.PgHome,
+            }),
+          }),
       ],
     }),
   ],
