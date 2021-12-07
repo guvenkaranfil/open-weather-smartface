@@ -4,8 +4,11 @@ import Location from '@smartface/native/device/location';
 import PermissionUtil from '@smartface/extension-utils/lib/permission';
 import { getWeatherByCityName, getWeatherByLocation } from '../api/weatherRepository';
 import { getLocation } from '@smartface/extension-utils/lib/location';
+import { NativeStackRouter } from '@smartface/router';
 
 export default class PgHome extends PgHomeDesign {
+    router: any
+
     constructor() {
         super();
         // Overrides super.onShow method
@@ -13,7 +16,13 @@ export default class PgHome extends PgHomeDesign {
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 
+        this.weeklyButton.onPress = () => {
+            this.router.push('/pages/pgWeekly')
+        }
+
         this.getUserLocation();
+
+        
     }
 
     async getWeatherInfoByLocation(latitude: number, longitude: number) {
