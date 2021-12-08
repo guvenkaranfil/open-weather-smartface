@@ -16,6 +16,10 @@
 			},
 			"type": "Page",
 			"userProps": {
+				"paddingBottom": 0,
+				"paddingLeft": 0,
+				"paddingRight": 0,
+				"paddingTop": 0,
 				"safeAreaEnabled": true
 			},
 			"version": "0.0.1.a"
