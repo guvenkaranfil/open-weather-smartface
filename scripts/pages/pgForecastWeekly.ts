@@ -36,9 +36,13 @@ function onLoad(this: PgForecastWeekly, superOnLoad: () => void) {
     superOnLoad();
 
     this.forecastList.backgroundColor = Color.create('#282B39')
+    this.forecastList.rowHeight = 50
+
 
     this.forecastList.onRowBind = (listViewItem: ForecastListItem) => {
-        listViewItem.lblTitle.text = 'lbl Title'
-        listViewItem.lblChevron.text = 'lbl Chevron'
+        
+        listViewItem.day.text = 'Monday'
+        listViewItem.dayDegree.text = '32'
+        listViewItem.nightDegree.text = '32'
     }
 }

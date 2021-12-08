@@ -20,8 +20,8 @@
 			"type": "ListViewItem",
 			"userProps": {
 				"flexProps": {},
-				"left": 0,
-				"top": 361.9047619047619
+				"left": "10",
+				"top": "472"
 			}
 		},
 		{
