@@ -1,0 +1,86 @@
+{
+	"components": [
+		{
+			"className": ".sf-listViewItem",
+			"id": "3bbb-be54-08c7-bd0d",
+			"props": {
+				"children": [
+					"cf10-1c4c-4e37-0505",
+					"c88f-8f68-60df-e59a"
+				],
+				"name": "weatherDay",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flexProps": {
+					"flexDirection": "ROW"
+				},
+				"left": "3.64",
+				"testId": "Bb4m54kvQ",
+				"top": "501.82"
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "cf10-1c4c-4e37-0505",
+			"props": {
+				"children": [
+					"f27e-e07a-6157-21ce"
+				],
+				"name": "flexLayout1",
+				"parent": "3bbb-be54-08c7-bd0d"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 0.3
+				},
+				"testId": "3cqT-DYXC"
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "f27e-e07a-6157-21ce",
+			"props": {
+				"children": [],
+				"name": "day",
+				"parent": "cf10-1c4c-4e37-0505",
+				"text": "Wednesday",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"testId": "qTff6rjG7",
+				"text": "Wednesday",
+				"textColor": "rgba( 255, 255, 255, 1 )",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "c88f-8f68-60df-e59a",
+			"props": {
+				"children": [],
+				"name": "flexLayout2",
+				"parent": "3bbb-be54-08c7-bd0d"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"testId": "hCIo72Tsg"
+			}
+		}
+	]
+}

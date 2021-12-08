@@ -7,7 +7,8 @@
 			"props": {
 				"children": [
 					"7ada-0901-a97a-8d3d",
-					"355f-27c9-cb02-73c5"
+					"355f-27c9-cb02-73c5",
+					"5985-a0e5-b28b-51ff"
 				],
 				"name": "pgWeekly",
 				"orientation": "PORTRAIT",
@@ -49,6 +50,60 @@
 			"type": "HeaderBar",
 			"userProps": {
 				"title": "pgWeekly"
+			}
+		},
+		{
+			"className": ".sf-listView",
+			"id": "5985-a0e5-b28b-51ff",
+			"props": {
+				"children": [
+					"271b-5a32-7a59-ac0c"
+				],
+				"itemCount": 5,
+				"name": "weatherDays",
+				"parent": "14a4-41b9-0aea-e3f9",
+				"rowHeight": 100,
+				"usePageVariable": true
+			},
+			"type": "ListView",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"height": null,
+				"itemCount": 5,
+				"rowHeight": 100,
+				"testId": "mMwIr1s-K",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-listViewItem",
+			"hiddenComponent": false,
+			"id": "271b-5a32-7a59-ac0c",
+			"props": {
+				"children": [],
+				"name": "weatherDay",
+				"parent": "5985-a0e5-b28b-51ff"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "weatherDay",
+				"id": "3bbb-be54-08c7-bd0d"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flex": {
+					"flexDirection": 2,
+					"positionType": 0
+				},
+				"flexProps": {
+					"flexDirection": "ROW",
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"testId": "Bb4m54kvQ",
+				"top": 0
 			}
 		}
 	]
