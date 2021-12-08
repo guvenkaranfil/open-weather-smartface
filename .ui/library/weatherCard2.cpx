@@ -1,0 +1,99 @@
+{
+	"components": [
+		{
+			"className": ".sf-gridViewItem .sf-gridViewItem-simple",
+			"hiddenComponent": false,
+			"id": "cf32-e7eb-7043-57ce",
+			"initialized": false,
+			"props": {
+				"children": [
+					"455e-2f00-b448-c9e6",
+					"a9be-16ab-9cf5-44c1"
+				],
+				"name": "weatherCard2",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "GridViewItem",
+			"userProps": {
+				"backgroundColor": "rgba( 255, 255, 255, 0 )",
+				"borderRadius": 20,
+				"flexProps": {
+					"alignItems": "FLEX_START",
+					"alignContent": "FLEX_START",
+					"alignSelf": "STRETCH"
+				},
+				"height": null,
+				"left": "-1.82",
+				"paddingLeft": 16,
+				"paddingRight": 16,
+				"right": 0,
+				"top": "374.55",
+				"width": null
+			}
+		},
+		{
+			"className": ".sf-label .sf-gridViewItem-simple-title",
+			"id": "455e-2f00-b448-c9e6",
+			"props": {
+				"autoHeight": 20.652173913043477,
+				"children": [],
+				"name": "lblTitle",
+				"parent": "cf32-e7eb-7043-57ce",
+				"text": "Grid Title Here",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 20.652173913043477,
+				"flexProps": {
+					"alignSelf": "STRETCH"
+				},
+				"height": null,
+				"marginTop": null,
+				"text": "Grid Title Here",
+				"textColor": "rgba( 95, 95, 100, 1 )",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label .sf-gridViewItem-simple-subtitle",
+			"id": "a9be-16ab-9cf5-44c1",
+			"props": {
+				"autoHeight": 18.478260869565215,
+				"children": [],
+				"name": "lblInfo",
+				"parent": "cf32-e7eb-7043-57ce",
+				"text": "Grid subtitle here",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"autoHeight": 18.478260869565215,
+				"flexProps": {
+					"alignSelf": "STRETCH"
+				},
+				"font": {
+					"size": 16,
+					"bold": false,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Regular"
+				},
+				"height": null,
+				"maxLines": 3,
+				"text": "Grid subtitle here",
+				"textColor": "rgba( 119, 118, 124, 1 )",
+				"usePageVariable": true
+			}
+		}
+	]
+}

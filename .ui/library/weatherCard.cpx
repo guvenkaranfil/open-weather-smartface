@@ -1,0 +1,70 @@
+{
+	"components": [
+		{
+			"className": ".sf-gridViewItem",
+			"id": "62d3-6ea9-4c0c-462f",
+			"props": {
+				"children": [
+					"12b4-86c7-920a-e3c4",
+					"a290-a94c-7e04-184d"
+				],
+				"name": "weatherCard",
+				"parent": "57f4-201f-4bfc-5fc6"
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "GridViewItem",
+			"userProps": {
+				"flexProps": {
+					"justifyContent": "FLEX_START"
+				},
+				"height": 200,
+				"left": "26.15",
+				"testId": "GEuNW3top",
+				"top": 10,
+				"width": 65
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "12b4-86c7-920a-e3c4",
+			"props": {
+				"children": [],
+				"name": "time",
+				"parent": "62d3-6ea9-4c0c-462f",
+				"text": "15 minutes ago",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"testId": "l0zHHzeuW",
+				"text": "15 minutes ago",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "a290-a94c-7e04-184d",
+			"props": {
+				"children": [],
+				"name": "info",
+				"parent": "62d3-6ea9-4c0c-462f",
+				"text": "this is a description",
+				"usePageVariable": true
+			},
+			"source": {
+				"page": "__library__"
+			},
+			"type": "Label",
+			"userProps": {
+				"testId": "z23vGQHHV",
+				"text": "this is a description",
+				"usePageVariable": true
+			}
+		}
+	]
+}

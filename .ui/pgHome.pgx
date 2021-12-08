@@ -8,7 +8,8 @@
 				"children": [
 					"a06b-0ca1-f3a1-a044",
 					"9a15-8eb9-30f4-05b6",
-					"e827-7d6b-c96f-37f7"
+					"e827-7d6b-c96f-37f7",
+					"86ad-8996-585b-eff3"
 				],
 				"name": "pgHome",
 				"orientation": "PORTRAIT",
@@ -307,6 +308,90 @@
 				"textAlignment": "MIDCENTER",
 				"textColor": "rgba( 0, 42, 57, 1 )",
 				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "86ad-8996-585b-eff3",
+			"props": {
+				"children": [
+					"2043-ec22-e509-f3a2"
+				],
+				"name": "flexLayout3",
+				"parent": "9d89-2831-4aee-22a9",
+				"usePageVariable": true
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"backgroundColor": "rgba( 40, 43, 57, 1 )",
+				"flexProps": {
+					"justifyContent": "CENTER"
+				},
+				"height": 300,
+				"paddingLeft": 20,
+				"paddingRight": 20,
+				"testId": "4XmvafgZY",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-gridView",
+			"id": "2043-ec22-e509-f3a2",
+			"props": {
+				"children": [
+					"464d-8da4-1817-2632"
+				],
+				"itemCount": 3,
+				"name": "weatherCards",
+				"parent": "86ad-8996-585b-eff3",
+				"usePageVariable": true
+			},
+			"type": "GridView",
+			"userProps": {
+				"height": 200,
+				"itemCount": 3,
+				"layoutManager": {
+					"spanCount": 1,
+					"scrollDirection": "HORIZONTAL"
+				},
+				"marginBottom": null,
+				"marginTop": null,
+				"testId": "rCEfTSriA",
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-gridViewItem .sf-gridViewItem-simple",
+			"hiddenComponent": false,
+			"id": "464d-8da4-1817-2632",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "weatherCard2",
+				"parent": "2043-ec22-e509-f3a2"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "weatherCard2",
+				"id": "cf32-e7eb-7043-57ce"
+			},
+			"type": "GridViewItem",
+			"userProps": {
+				"backgroundColor": "rgba( 255, 255, 255, 0 )",
+				"borderRadius": 25,
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE",
+					"alignItems": "FLEX_START",
+					"alignContent": "FLEX_START",
+					"alignSelf": "AUTO",
+					"justifyContent": "CENTER"
+				},
+				"height": 150,
+				"testId": "-kWDq8UW3",
+				"width": null
 			}
 		}
 	]

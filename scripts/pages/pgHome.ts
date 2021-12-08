@@ -5,11 +5,18 @@ import PermissionUtil from '@smartface/extension-utils/lib/permission';
 import { getWeatherByCityName, getWeatherByLocation } from '../api/weatherRepository';
 import { getLocation } from '@smartface/extension-utils/lib/location';
 import Color from '@smartface/native/ui/color';
+import Screen from '@smartface/native/device/screen';
 
 
 import { config } from 'settings.json';
 import ImageView from '@smartface/native/ui/imageview';
 import View from '@smartface/native/ui/view';
+import WeatherCard from 'components/WeatherCard';
+import GridViewItem from '@smartface/native/ui/gridviewitem';
+import Simple_gridviewItem from 'components/Simple_gridviewItem';
+import Simple_listviewitem from 'generated/my-components/Simple_listviewitem';
+import WeatherCard2 from 'components/WeatherCard2';
+
 
 export default class PgHome extends PgHomeDesign {
     router: any
@@ -55,6 +62,18 @@ export default class PgHome extends PgHomeDesign {
 
         }
     }
+
+    initWeatherCards() {
+        this.weatherCards.layoutManager.onItemLength = () => {
+            return Screen.width - 40
+        }
+
+        this.weatherCards.onItemBind = (gridViewItem: WeatherCard2) => {
+            gridViewItem.lblTitle.text = WEATHER_INFOS[0].time
+            gridViewItem.lblInfo.text = WEATHER_INFOS[0].info
+            gridViewItem.backgroundColor =  Color.create('#323746')
+        }
+    }
 }
 
 /**
@@ -74,8 +93,17 @@ function onShow(this: PgHome, superOnShow: () => void) {
  */
 function onLoad(this: PgHome, superOnLoad: () => void) {
     superOnLoad();
+
+    this.initWeatherCards();
 }
 
 
 const COLORS = [Color.RED, Color.BLUE]
 
+
+const WEATHER_INFOS = [
+    {
+        time: "15 Minutes Ago",
+        info: "If you don't want to get wet today, don't forget your umbrella"
+    }
+]

@@ -52,7 +52,8 @@
 				"children": [],
 				"name": "lblTitle",
 				"parent": "aea8-55c1-833e-4baa",
-				"text": "Grid Title Here"
+				"text": "Grid Title Here",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -60,7 +61,8 @@
 			"type": "Label",
 			"userProps": {
 				"autoHeight": 20.652173913043477,
-				"text": "Grid Title Here"
+				"text": "Grid Title Here",
+				"usePageVariable": true
 			}
 		},
 		{
