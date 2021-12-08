@@ -62,7 +62,7 @@
 				"itemCount": 5,
 				"name": "weatherDays",
 				"parent": "14a4-41b9-0aea-e3f9",
-				"rowHeight": 100,
+				"rowHeight": null,
 				"usePageVariable": true
 			},
 			"type": "ListView",
@@ -72,7 +72,7 @@
 				},
 				"height": null,
 				"itemCount": 5,
-				"rowHeight": 100,
+				"rowHeight": null,
 				"testId": "mMwIr1s-K",
 				"usePageVariable": true
 			}
