@@ -19,4 +19,4 @@ Application.onUnhandledError = function (e: UnhandledError) {
     });
 };
 
-router.push('/pages/pgWeekly');
+router.push('/pages/pgForecastWeekly', { headerTitle: 'Adapazarı' });
