@@ -4,7 +4,12 @@ import Location from '@smartface/native/device/location';
 import PermissionUtil from '@smartface/extension-utils/lib/permission';
 import { getWeatherByCityName, getWeatherByLocation } from '../api/weatherRepository';
 import { getLocation } from '@smartface/extension-utils/lib/location';
-import { NativeStackRouter } from '@smartface/router';
+import Color from '@smartface/native/ui/color';
+
+
+import { config } from 'settings.json';
+import ImageView from '@smartface/native/ui/imageview';
+import View from '@smartface/native/ui/view';
 
 export default class PgHome extends PgHomeDesign {
     router: any
@@ -16,13 +21,13 @@ export default class PgHome extends PgHomeDesign {
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 
-        this.weeklyButton.onPress = () => {
+        this.imageView2.on(View.Events.Touch, () => {
             this.router.push('/pages/pgWeekly')
-        }
+        })
 
         this.getUserLocation();
 
-        
+
     }
 
     async getWeatherInfoByLocation(latitude: number, longitude: number) {
@@ -70,3 +75,7 @@ function onShow(this: PgHome, superOnShow: () => void) {
 function onLoad(this: PgHome, superOnLoad: () => void) {
     superOnLoad();
 }
+
+
+const COLORS = [Color.RED, Color.BLUE]
+

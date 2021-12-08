@@ -54,25 +54,27 @@
 			}
 		},
 		{
-			"className": ".sf-flexLayout",
+			"className": ".sf-flexLayout .pgHomeContainerRain",
 			"id": "e827-7d6b-c96f-37f7",
 			"props": {
 				"children": [
-					"3eb0-670e-7bb7-9432"
+					"3eb0-670e-7bb7-9432",
+					"e0d9-a86f-9bb9-91b4"
 				],
-				"name": "flexLayout1",
-				"parent": "9d89-2831-4aee-22a9"
+				"name": "pgHomeContainer",
+				"parent": "9d89-2831-4aee-22a9",
+				"usePageVariable": true
 			},
 			"type": "FlexLayout",
 			"userProps": {
-				"backgroundColor": "rgba( 132, 214, 248, 1 )",
 				"flexProps": {
 					"flexGrow": 1
 				},
 				"height": null,
 				"marginBottom": 0,
 				"marginTop": 0,
-				"testId": "2_mK645cL"
+				"testId": "2_mK645cL",
+				"usePageVariable": true
 			}
 		},
 		{
@@ -148,7 +150,7 @@
 				"name": "cityName",
 				"parent": "8fd1-fa5c-d172-5103",
 				"text": "San Francisco",
-				"usePageVariable": false
+				"usePageVariable": true
 			},
 			"type": "Label",
 			"userProps": {
@@ -163,7 +165,7 @@
 				"text": "San Francisco",
 				"textColor": "rgba( 0, 56, 81, 1 )",
 				"top": 0,
-				"usePageVariable": false,
+				"usePageVariable": true,
 				"width": null
 			}
 		},
@@ -204,7 +206,8 @@
 				},
 				"height": null,
 				"paddingRight": 15,
-				"testId": "TnnRQ_evu"
+				"testId": "TnnRQ_evu",
+				"width": null
 			}
 		},
 		{
@@ -213,7 +216,8 @@
 			"props": {
 				"children": [],
 				"name": "imageView2",
-				"parent": "493e-d0b2-1455-29fa"
+				"parent": "493e-d0b2-1455-29fa",
+				"usePageVariable": true
 			},
 			"type": "ImageView",
 			"userProps": {
@@ -221,7 +225,88 @@
 				"image": "calendar.png",
 				"imageFillType": "ASPECTFIT",
 				"testId": "xf9TY_1KT",
+				"usePageVariable": true,
 				"width": 100
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"id": "e0d9-a86f-9bb9-91b4",
+			"props": {
+				"children": [
+					"4d94-e5ba-1623-8214",
+					"de86-05e3-3b44-fdb9"
+				],
+				"name": "flexLayout2",
+				"parent": "e827-7d6b-c96f-37f7"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1,
+					"alignItems": "CENTER",
+					"justifyContent": "CENTER",
+					"alignSelf": "AUTO"
+				},
+				"height": null,
+				"testId": "0KUNiPMN-"
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "4d94-e5ba-1623-8214",
+			"props": {
+				"children": [],
+				"name": "weatherType",
+				"parent": "e0d9-a86f-9bb9-91b4",
+				"text": "label1",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"font": {
+					"size": 20,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": 50,
+				"maxLines": 2,
+				"testId": "wgwGsAszm",
+				"text": "label1",
+				"textAlignment": "MIDCENTER",
+				"textColor": "rgba( 0, 42, 57, 1 )",
+				"usePageVariable": true,
+				"width": 250
+			}
+		},
+		{
+			"className": ".sf-label",
+			"id": "de86-05e3-3b44-fdb9",
+			"props": {
+				"children": [],
+				"name": "weatherDegree",
+				"parent": "e0d9-a86f-9bb9-91b4",
+				"text": "label2",
+				"usePageVariable": true
+			},
+			"type": "Label",
+			"userProps": {
+				"font": {
+					"size": 45,
+					"bold": true,
+					"italic": false,
+					"family": "SFProText",
+					"style": "Semibold"
+				},
+				"height": null,
+				"marginTop": 16,
+				"testId": "1G1hRYFsx",
+				"text": "label2",
+				"textAlignment": "MIDCENTER",
+				"textColor": "rgba( 0, 42, 57, 1 )",
+				"usePageVariable": true
 			}
 		}
 	]
