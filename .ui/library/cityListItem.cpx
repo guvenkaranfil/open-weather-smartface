@@ -3,15 +3,15 @@
 		{
 			"className": ".sf-listViewItem .sf-listViewItem-simple",
 			"hiddenComponent": false,
-			"id": "1841-ff9a-b968-028d",
-			"initialized": true,
+			"id": "6747-7166-c68f-2642",
+			"initialized": false,
 			"props": {
 				"children": [
-					"24ca-f21f-dfb6-5dc9",
-					"8474-887d-3102-405e",
-					"bd8f-5e00-4110-7fd7"
+					"6639-d543-e2b7-8f9a",
+					"f6b9-501b-6036-dd55",
+					"1fb4-8345-37d2-dfb0"
 				],
-				"name": "simple_listviewitem",
+				"name": "cityListItem",
 				"parent": "57f4-201f-4bfc-5fc6"
 			},
 			"source": {
@@ -20,19 +20,19 @@
 			"type": "ListViewItem",
 			"userProps": {
 				"flexProps": {},
-				"left": "10",
-				"top": "472"
+				"left": "1010",
+				"top": "47210"
 			}
 		},
 		{
 			"className": ".sf-label .sf-listViewItem-simple-title",
-			"id": "24ca-f21f-dfb6-5dc9",
+			"id": "6639-d543-e2b7-8f9a",
 			"props": {
 				"autoHeight": 51.086956521739125,
 				"autoWidth": 134.91847826086956,
 				"children": [],
-				"name": "lblTitle",
-				"parent": "1841-ff9a-b968-028d",
+				"name": "cityName",
+				"parent": "6747-7166-c68f-2642",
 				"text": "ListView Cell Title",
 				"usePageVariable": true
 			},
@@ -50,13 +50,13 @@
 		},
 		{
 			"className": ".sf-label .sf-listViewItem-simple-chevron",
-			"id": "8474-887d-3102-405e",
+			"id": "f6b9-501b-6036-dd55",
 			"props": {
 				"autoHeight": 51.086956521739125,
 				"autoWidth": 10.478940217391305,
 				"children": [],
-				"name": "lblChevron",
-				"parent": "1841-ff9a-b968-028d",
+				"name": "cityId",
+				"parent": "6747-7166-c68f-2642",
 				"text": "",
 				"usePageVariable": true
 			},
@@ -74,11 +74,11 @@
 		},
 		{
 			"className": ".sf-flexLayout .sf-listViewItem-simple-line",
-			"id": "bd8f-5e00-4110-7fd7",
+			"id": "1fb4-8345-37d2-dfb0",
 			"props": {
 				"children": [],
 				"name": "flLine",
-				"parent": "1841-ff9a-b968-028d",
+				"parent": "6747-7166-c68f-2642",
 				"usePageVariable": true
 			},
 			"source": {

@@ -1,98 +1,186 @@
 {
 	"components": [
 		{
-			"type": "Page",
-			"id": "3ff9-54ac-2b3f-cb27",
-			"userProps": {},
 			"className": ".sf-page",
+			"id": "e221-3256-416e-25b8",
+			"initialized": true,
 			"props": {
-				"name": "pgCitySearch",
-				"parent": null,
 				"children": [
-					"9b21-5d07-114e-e69c",
-					"ec6d-7509-b28c-7e41"
+					"cd82-5851-9d4c-7814",
+					"6617-d78b-4846-9072",
+					"97b2-478e-6045-0228"
 				],
-				"orientation": "PORTRAIT"
+				"name": "pgCitySearch",
+				"orientation": "PORTRAIT",
+				"parent": null
 			},
-			"version": "0.0.1.a",
-			"initialized": false
+			"type": "Page",
+			"userProps": {
+				"paddingBottom": null,
+				"paddingLeft": null,
+				"paddingRight": null,
+				"paddingTop": null
+			},
+			"version": "0.0.1.a"
 		},
 		{
-			"type": "StatusBar",
-			"id": "9b21-5d07-114e-e69c",
-			"userProps": {},
 			"className": ".sf-statusBar",
+			"id": "cd82-5851-9d4c-7814",
 			"props": {
-				"name": "statusBar",
-				"parent": "3ff9-54ac-2b3f-cb27",
 				"children": [],
-				"visible": true,
-				"isRemovable": false
+				"isRemovable": false,
+				"name": "statusBar",
+				"parent": "e221-3256-416e-25b8"
+			},
+			"type": "StatusBar",
+			"userProps": {}
+		},
+		{
+			"className": ".sf-headerBar",
+			"id": "6617-d78b-4846-9072",
+			"props": {
+				"children": [],
+				"isRemovable": false,
+				"name": "headerBar",
+				"parent": "e221-3256-416e-25b8",
+				"title": "Cities"
+			},
+			"type": "HeaderBar",
+			"userProps": {
+				"title": "Cities"
 			}
 		},
 		{
-			"type": "HeaderBar",
-			"id": "ec6d-7509-b28c-7e41",
-			"userProps": {
-				"title": "pgCitySearch"
-			},
-			"className": ".sf-headerBar",
+			"className": ".sf-flexLayout",
+			"id": "97b2-478e-6045-0228",
 			"props": {
-				"name": "headerBar",
-				"parent": "3ff9-54ac-2b3f-cb27",
-				"children": [],
-				"title": "pgCitySearch",
-				"visible": true,
-				"isRemovable": false
-			}
-		}
-	],
-	"componentByID": {
-		"be4c-af0d-6367-8119": {
-			"type": "Page",
-			"id": "3ff9-54ac-2b3f-cb27",
-			"userProps": {},
-			"className": ".sf-page",
-			"props": {
-				"name": "pgCitySearch",
-				"parent": null,
 				"children": [
-					"9b21-5d07-114e-e69c",
-					"ec6d-7509-b28c-7e41"
+					"c221-7ce4-04fb-699a",
+					"1252-71a8-4a4c-68a7"
 				],
-				"orientation": "PORTRAIT"
+				"name": "flexLayout2",
+				"parent": "e221-3256-416e-25b8"
 			},
-			"version": "0.0.1.a",
-			"initialized": false
-		},
-		"0a68-c21d-fce5-bb35": {
-			"type": "StatusBar",
-			"id": "9b21-5d07-114e-e69c",
-			"userProps": {},
-			"className": ".sf-statusBar",
-			"props": {
-				"name": "statusBar",
-				"parent": "3ff9-54ac-2b3f-cb27",
-				"children": [],
-				"visible": true,
-				"isRemovable": false
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"height": null,
+				"testId": "TsVxZzVT9"
 			}
 		},
-		"a5d8-28c3-95af-225d": {
-			"type": "HeaderBar",
-			"id": "ec6d-7509-b28c-7e41",
-			"userProps": {
-				"title": "pgCitySearch"
-			},
-			"className": ".sf-headerBar",
+		{
+			"className": ".sf-flexLayout",
+			"id": "c221-7ce4-04fb-699a",
 			"props": {
-				"name": "headerBar",
-				"parent": "3ff9-54ac-2b3f-cb27",
+				"children": [
+					"d332-92b5-2b32-007e"
+				],
+				"name": "flexLayout2",
+				"parent": "97b2-478e-6045-0228"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"justifyContent": "FLEX_END"
+				},
+				"height": 100,
+				"testId": "FhtPrBF6E"
+			}
+		},
+		{
+			"className": ".sf-searchView",
+			"id": "d332-92b5-2b32-007e",
+			"props": {
 				"children": [],
-				"title": "pgCitySearch",
-				"visible": true,
-				"isRemovable": false
+				"hint": "Search",
+				"name": "citySearch",
+				"parent": "c221-7ce4-04fb-699a",
+				"usePageVariable": true
+			},
+			"type": "SearchView",
+			"userProps": {
+				"hint": "Search",
+				"left": 0,
+				"testId": "LSVKtSxBC",
+				"top": 0,
+				"usePageVariable": true
+			}
+		},
+		{
+			"className": ".sf-flexLayout",
+			"hiddenComponent": false,
+			"id": "1252-71a8-4a4c-68a7",
+			"props": {
+				"children": [
+					"a363-61f4-76a5-c250"
+				],
+				"name": "flexLayout1",
+				"parent": "97b2-478e-6045-0228"
+			},
+			"type": "FlexLayout",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"height": null,
+				"testId": "O-cprwTM8"
+			}
+		},
+		{
+			"className": ".sf-listView",
+			"id": "a363-61f4-76a5-c250",
+			"props": {
+				"children": [
+					"ac3f-cfb8-60fb-c910"
+				],
+				"itemCount": 5,
+				"name": "cityList",
+				"parent": "1252-71a8-4a4c-68a7",
+				"rowHeight": null,
+				"usePageVariable": true
+			},
+			"type": "ListView",
+			"userProps": {
+				"flexProps": {
+					"flexGrow": 1
+				},
+				"height": null,
+				"itemCount": 5,
+				"rowHeight": 150,
+				"testId": "Lbltx4jXw",
+				"usePageVariable": true,
+				"width": null
+			}
+		},
+		{
+			"className": ".sf-listViewItem .sf-listViewItem-simple",
+			"hiddenComponent": false,
+			"id": "ac3f-cfb8-60fb-c910",
+			"initialized": false,
+			"props": {
+				"children": [],
+				"name": "cityListItem",
+				"parent": "a363-61f4-76a5-c250"
+			},
+			"source": {
+				"page": "__library__",
+				"type": "cityListItem",
+				"id": "6747-7166-c68f-2642"
+			},
+			"type": "ListViewItem",
+			"userProps": {
+				"flex": {
+					"positionType": 0
+				},
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"testId": "bcf3_vBi-",
+				"top": 0
 			}
 		}
-	}
+	]
 }
