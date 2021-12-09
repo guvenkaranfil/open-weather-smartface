@@ -155,7 +155,7 @@
 				"marginTop": null,
 				"testId": "HdqLz8AhY",
 				"text": "label3",
-				"textColor": "rgba( 255, 255, 255, 1 )",
+				"textColor": "rgba( 255, 255, 255, 0.5 )",
 				"usePageVariable": true
 			}
 		},
@@ -164,8 +164,9 @@
 			"id": "7c4b-c50f-4cb3-31c7",
 			"props": {
 				"children": [],
-				"name": "imageView1",
-				"parent": "7030-ac0f-a057-bebd"
+				"name": "weatherTypeIcon",
+				"parent": "7030-ac0f-a057-bebd",
+				"usePageVariable": true
 			},
 			"source": {
 				"page": "__library__"
@@ -173,7 +174,9 @@
 			"type": "ImageView",
 			"userProps": {
 				"height": 35,
+				"imageFillType": "ASPECTFIT",
 				"testId": "A326LrmXx",
+				"usePageVariable": true,
 				"width": 80
 			}
 		}
