@@ -1,7 +1,8 @@
 import ContentInsetAdjustment from "@smartface/native/ui/ios/contentinsetadjustment";
+import { City } from "api";
 
 export interface SessionState {
-    city: string
+    city: City
 }
 
 
@@ -12,7 +13,7 @@ export namespace Constants {
 declare namespace Actions {
     export interface SetCity {
         type: typeof Constants.UPDATE_CITY
-        payload: { city: string }
+        payload: { city: City }
     }
 }
 

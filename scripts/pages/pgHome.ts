@@ -49,28 +49,12 @@ export default class PgHome extends PgHomeDesign {
         try {
             const response = await getWeatherByLocation(latitude, longitude)
             if (response) {
-                store.dispatch(SessionActions.updateCity(response.name))
-                console.log('after state: ', store.getState())
                 this.currentLocationCity = response.name
-                this.cityName.text = store.getState().session.city
+                this.cityName.text = response.name
                 this.weatherType.text = response.weather[0].main
                 this.weatherDegree.text = response.main.temp
-            }
-        } catch (error) {
 
-        }
-    }
-
-    async getWeatherInfoByCityName(cityName: string) {
-        try {
-            const response = await getWeatherByCityName(cityName)
-            if (response) {
-                store.dispatch(SessionActions.updateCity(response.name))
-                console.log('after state: ', store.getState())
-                this.currentLocationCity = response.name
-                this.cityName.text = store.getState().session.city
-                this.weatherType.text = response.weather[0].main
-                this.weatherDegree.text = response.main.temp
+                this.pgHomeContainer.backgroundColor = getBackgroundColor(response.main.temp)
             }
         } catch (error) {
 
@@ -113,9 +97,11 @@ function onShow(this: PgHome, superOnShow: () => void) {
 
 
     const currentCityName = this.cityName.text;
-    const sessionCityName = store.getState().session.city
-    if (currentCityName != sessionCityName) {
-        this.getWeatherInfoByCityName(sessionCityName);
+    const sessionCity = store.getState().session.city
+    if ((currentCityName != sessionCity.name) && sessionCity.id != -1) {
+        console.log('convertion:', Number(sessionCity.latitude), Number(sessionCity.longitude))
+        this.getWeatherInfoByLocation(Number(sessionCity.latitude), Number(sessionCity.longitude))
+
     }
 
 }
@@ -134,8 +120,26 @@ function onLoad(this: PgHome, superOnLoad: () => void) {
     this.initWeatherCards();
 }
 
+function getBackgroundColor(degree: number): Color {
+    if (degree < 10) {
+        return Color.create(COLORS.snowy)
+    }
+    if (degree < 15) {
+        return Color.create(COLORS.rainy)
+    }
+    if (degree < 20) {
+        return Color.create(COLORS.sunny)
+    }
+}
 
-const COLORS = [Color.RED, Color.BLUE]
+
+const COLORS = {
+    sunny: '#fcba03',
+    snowy: '#4292ed',
+    rainy: '#b06951'
+}
+
+
 
 
 const WEATHER_INFOS = [

@@ -2,7 +2,7 @@ import { baseURLApi } from './index';
 
 export async function getWeatherByCityName(cityName: string) {
   try {
-    return await baseURLApi.request(`&q=${cityName}`, {
+    return await baseURLApi.request(`&q=${cityName.toLocaleLowerCase()}`, {
       method: 'GET'
     });
   } catch (err) {

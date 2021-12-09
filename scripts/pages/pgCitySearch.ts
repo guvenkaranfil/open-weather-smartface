@@ -56,9 +56,14 @@ export default class PgCitySearch extends PgCitySearchDesign {
         }
 
         this.cityList.onRowSelected = (selectedItem: CityListItem, index: number) => {
-            console.log('selectedRow:' + index )
-            console.log('selectedCity:' , selectedItem.cityName.text)
-            store.dispatch(SessionActions.updateCity(selectedItem.cityName.text))
+            console.log('selectedRow:' + index)
+            console.log('selectedCity:', selectedItem.cityName.text)
+
+            let selectedCity = this.cities.find(
+                city => city.name === selectedItem.cityName.text
+            )
+
+            store.dispatch(SessionActions.updateCity(selectedCity))
             this.router.goBack();
         }
 
