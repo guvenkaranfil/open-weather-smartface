@@ -6,7 +6,11 @@ import { City, getCities } from 'api';
 import CityListItem from 'generated/my-components/CityListItem';
 import PgCitySearchDesign from 'generated/pages/pgCitySearch';
 
+import store from 'duck/store'
+import SessionActions from 'duck/session/actions'
+
 export default class PgCitySearch extends PgCitySearchDesign {
+    router: any
     loaderView: FlexLayout
     cities: City[]
     searchedCities: City[]
@@ -43,11 +47,24 @@ export default class PgCitySearch extends PgCitySearchDesign {
     initListView() {
         this.cityList.itemCount = this.cities.length
         this.cityList.rowHeight = 50
+        this.cityList.touchEnabled = true
 
         this.cityList.onRowBind = (listViewItem: CityListItem, index: number) => {
             let currentCity = this.searchedCities[index]
             listViewItem.cityName.text = currentCity.name
             listViewItem.cityId.text = String(currentCity.id)
+        }
+
+        this.cityList.onRowSelected = (selectedItem: CityListItem, index: number) => {
+            console.log('selectedRow:' + index )
+            console.log('selectedCity:' , selectedItem.cityName.text)
+            store.dispatch(SessionActions.updateCity(selectedItem.cityName.text))
+            this.router.goBack();
+        }
+
+        this.cityList.onPullRefresh = () => {
+            console.log('refresh....')
+            this.cityList.stopRefresh();
         }
 
         this.cityList.refreshData();

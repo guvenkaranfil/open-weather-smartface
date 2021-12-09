@@ -17,6 +17,9 @@ import Simple_gridviewItem from 'components/Simple_gridviewItem';
 import WeatherCard2 from 'components/WeatherCard2';
 import { getCities } from 'api';
 
+import store from 'duck/store';
+import SessionActions from 'duck/session/actions'
+
 
 export default class PgHome extends PgHomeDesign {
     router: any
@@ -46,15 +49,32 @@ export default class PgHome extends PgHomeDesign {
         try {
             const response = await getWeatherByLocation(latitude, longitude)
             if (response) {
+                store.dispatch(SessionActions.updateCity(response.name))
+                console.log('after state: ', store.getState())
                 this.currentLocationCity = response.name
-                this.cityName.text = response.name
+                this.cityName.text = store.getState().session.city
                 this.weatherType.text = response.weather[0].main
                 this.weatherDegree.text = response.main.temp
             }
         } catch (error) {
 
         }
+    }
 
+    async getWeatherInfoByCityName(cityName: string) {
+        try {
+            const response = await getWeatherByCityName(cityName)
+            if (response) {
+                store.dispatch(SessionActions.updateCity(response.name))
+                console.log('after state: ', store.getState())
+                this.currentLocationCity = response.name
+                this.cityName.text = store.getState().session.city
+                this.weatherType.text = response.weather[0].main
+                this.weatherDegree.text = response.main.temp
+            }
+        } catch (error) {
+
+        }
     }
 
     async getUserLocation() {
@@ -90,6 +110,14 @@ export default class PgHome extends PgHomeDesign {
  */
 function onShow(this: PgHome, superOnShow: () => void) {
     superOnShow();
+
+
+    const currentCityName = this.cityName.text;
+    const sessionCityName = store.getState().session.city
+    if (currentCityName != sessionCityName) {
+        this.getWeatherInfoByCityName(sessionCityName);
+    }
+
 }
 
 /**
@@ -99,6 +127,9 @@ function onShow(this: PgHome, superOnShow: () => void) {
  */
 function onLoad(this: PgHome, superOnLoad: () => void) {
     superOnLoad();
+
+    const session = store.getState();
+    console.log('state: ', store.getState())
 
     this.initWeatherCards();
 }
