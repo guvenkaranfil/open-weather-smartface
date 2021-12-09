@@ -110,8 +110,9 @@
 					"2b69-ac44-6f0a-bcba",
 					"e737-9240-242b-ea26"
 				],
-				"name": "flexLayout1",
-				"parent": "3eb0-670e-7bb7-9432"
+				"name": "citySearch",
+				"parent": "3eb0-670e-7bb7-9432",
+				"usePageVariable": true
 			},
 			"type": "FlexLayout",
 			"userProps": {
@@ -121,7 +122,8 @@
 					"flexDirection": "ROW"
 				},
 				"paddingLeft": 15,
-				"testId": "wmBkg70Dv"
+				"testId": "wmBkg70Dv",
+				"usePageVariable": true
 			}
 		},
 		{
@@ -175,8 +177,9 @@
 			"id": "e737-9240-242b-ea26",
 			"props": {
 				"children": [],
-				"name": "dropdown",
-				"parent": "8fd1-fa5c-d172-5103"
+				"name": "citySearchDropDown",
+				"parent": "8fd1-fa5c-d172-5103",
+				"usePageVariable": true
 			},
 			"type": "ImageView",
 			"userProps": {
@@ -187,6 +190,7 @@
 				"marginLeft": 30,
 				"testId": "_63b_SXiI",
 				"top": 0,
+				"usePageVariable": true,
 				"width": 15
 			}
 		},

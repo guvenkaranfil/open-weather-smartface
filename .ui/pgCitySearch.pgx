@@ -1,0 +1,98 @@
+{
+	"components": [
+		{
+			"type": "Page",
+			"id": "3ff9-54ac-2b3f-cb27",
+			"userProps": {},
+			"className": ".sf-page",
+			"props": {
+				"name": "pgCitySearch",
+				"parent": null,
+				"children": [
+					"9b21-5d07-114e-e69c",
+					"ec6d-7509-b28c-7e41"
+				],
+				"orientation": "PORTRAIT"
+			},
+			"version": "0.0.1.a",
+			"initialized": false
+		},
+		{
+			"type": "StatusBar",
+			"id": "9b21-5d07-114e-e69c",
+			"userProps": {},
+			"className": ".sf-statusBar",
+			"props": {
+				"name": "statusBar",
+				"parent": "3ff9-54ac-2b3f-cb27",
+				"children": [],
+				"visible": true,
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "HeaderBar",
+			"id": "ec6d-7509-b28c-7e41",
+			"userProps": {
+				"title": "pgCitySearch"
+			},
+			"className": ".sf-headerBar",
+			"props": {
+				"name": "headerBar",
+				"parent": "3ff9-54ac-2b3f-cb27",
+				"children": [],
+				"title": "pgCitySearch",
+				"visible": true,
+				"isRemovable": false
+			}
+		}
+	],
+	"componentByID": {
+		"be4c-af0d-6367-8119": {
+			"type": "Page",
+			"id": "3ff9-54ac-2b3f-cb27",
+			"userProps": {},
+			"className": ".sf-page",
+			"props": {
+				"name": "pgCitySearch",
+				"parent": null,
+				"children": [
+					"9b21-5d07-114e-e69c",
+					"ec6d-7509-b28c-7e41"
+				],
+				"orientation": "PORTRAIT"
+			},
+			"version": "0.0.1.a",
+			"initialized": false
+		},
+		"0a68-c21d-fce5-bb35": {
+			"type": "StatusBar",
+			"id": "9b21-5d07-114e-e69c",
+			"userProps": {},
+			"className": ".sf-statusBar",
+			"props": {
+				"name": "statusBar",
+				"parent": "3ff9-54ac-2b3f-cb27",
+				"children": [],
+				"visible": true,
+				"isRemovable": false
+			}
+		},
+		"a5d8-28c3-95af-225d": {
+			"type": "HeaderBar",
+			"id": "ec6d-7509-b28c-7e41",
+			"userProps": {
+				"title": "pgCitySearch"
+			},
+			"className": ".sf-headerBar",
+			"props": {
+				"name": "headerBar",
+				"parent": "3ff9-54ac-2b3f-cb27",
+				"children": [],
+				"title": "pgCitySearch",
+				"visible": true,
+				"isRemovable": false
+			}
+		}
+	}
+}

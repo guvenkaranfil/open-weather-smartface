@@ -14,12 +14,13 @@ import View from '@smartface/native/ui/view';
 import WeatherCard from 'components/WeatherCard';
 import GridViewItem from '@smartface/native/ui/gridviewitem';
 import Simple_gridviewItem from 'components/Simple_gridviewItem';
-import Simple_listviewitem from 'generated/my-components/Simple_listviewitem';
 import WeatherCard2 from 'components/WeatherCard2';
+import { getCities } from 'api';
 
 
 export default class PgHome extends PgHomeDesign {
     router: any
+    currentLocationCity: string
 
     constructor() {
         super();
@@ -28,8 +29,12 @@ export default class PgHome extends PgHomeDesign {
         // Overrides super.onLoad method
         this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
 
+        this.citySearch.on(View.Events.Touch, () => {
+            this.router.push('/pages/pgCitySearch');
+        })
+
         this.imageView2.on(View.Events.Touch, () => {
-            this.router.push('/pages/pgWeekly')
+            this.router.push('/pages/pgForecastWeekly', { headerTitle: this.currentLocationCity });
         })
 
         this.getUserLocation();
@@ -41,6 +46,7 @@ export default class PgHome extends PgHomeDesign {
         try {
             const response = await getWeatherByLocation(latitude, longitude)
             if (response) {
+                this.currentLocationCity = response.name
                 this.cityName.text = response.name
                 this.weatherType.text = response.weather[0].main
                 this.weatherDegree.text = response.main.temp
@@ -71,7 +77,7 @@ export default class PgHome extends PgHomeDesign {
         this.weatherCards.onItemBind = (gridViewItem: WeatherCard2) => {
             gridViewItem.lblTitle.text = WEATHER_INFOS[0].time
             gridViewItem.lblInfo.text = WEATHER_INFOS[0].info
-            gridViewItem.backgroundColor =  Color.create('#323746')
+            gridViewItem.backgroundColor = Color.create('#323746')
         }
     }
 }

@@ -18,9 +18,9 @@ const weatherRouter = StackRouter.of({
             }),
         }),
         Route.of({
-            path: '/pages/pgWeekly',
+            path: '/pages/pgCitySearch',
             build: buildExtender({
-                getPageClass: () => Pages.PgWeekly,
+                getPageClass: () => Pages.PgCitySearch,
                 headerBarStyle: { visible: true },
             }),
         }),
